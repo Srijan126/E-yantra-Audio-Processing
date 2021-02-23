@@ -102,7 +102,7 @@ def Instrument_identify(audio_file):
                 we can call the function by its name and the path must be defined inside the bracket
                 along with the task to be performed.Here,we have used 'r' to read the file only.
                 The open function from wave module takes the path to audio file and the
-                mode as parameters. We are using mode = ‘r’, i.e. reading mode. In this case wave.open returns a
+                mode as parameters. We are using mode = â€˜râ€™, i.e. reading mode. In this case wave.open returns a
                 Wave_read object.
 '''
         sound_file = wave.open(file_name, 'r')
@@ -133,7 +133,7 @@ def Instrument_identify(audio_file):
                 data = struct.unpack("<h", data)
                 sound[i] = int(data[0])
     
-        sound = np.divide(sound, float(2**15))  # Normalize data in range -1 to 1
+        sound = np.divide(sound, float(2**15))   # Normalize data in range -1 to 1
 
 
 ######################### DETECTING SCILENCE ##################################
@@ -224,9 +224,9 @@ if __name__ == "__main__":
         print("\n\tOnsets = " + str(Onsets))
         # code for checking output for all audio files
         
-        x = raw_input("\n\tWant to check output for all Audio Files - Y/N: ")
+        x  =  raw_input("\n\tWant to check output for all Audio Files - Y/N: ")
                 
-        if x == 'Y':
+        if x  ==  'Y':
 
                 Instruments_list = []
                 Detected_Notes_list = []
